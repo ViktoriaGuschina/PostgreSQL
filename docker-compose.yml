@@ -3,10 +3,10 @@ version: '3.8'
 services:
   postgres:
     image: postgres:latest
-    container_name: my_postgres
+    container_name: postgres_container
     environment:
-      POSTGRES_USER: app
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: app
+      POSTGRES_USER: app           # User 'app'
+      POSTGRES_PASSWORD: app_pass  # Password for user 'app'
+      POSTGRES_DB: app_db         # Default database to create
     ports:
-      - "5432:5432"
+      - "5433:5432"               # Expose PostgreSQL port 5432
